@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import Details from "@/components/Details.vue";
 import Search from "@/components/Search.vue";
+import Splash from "@/components/Splash.vue";
 </script>
 
 <template>
   <main>
     <div class="grid">
       <div class="search"><Search /></div>
-      <div class="one">one</div>
+      <div class="one"><Splash /></div>
       <div class="two"><Details /></div>
     </div>
   </main>
