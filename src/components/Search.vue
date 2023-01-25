@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import SimpleTypeahead from "vue3-simple-typeahead";
 import LOOKUP_LIST, { type LookupItem } from "@/static/data";
+import { useStore } from "@/stores/store";
+
+const store = useStore();
+const { setCurrentItem } = store;
+
+function newSearch(item: LookupItem) {
+  setCurrentItem(item);
+}
 </script>
 
 <template>
@@ -11,7 +19,8 @@ import LOOKUP_LIST, { type LookupItem } from "@/static/data";
       :items="LOOKUP_LIST"
       :minInputLength="2"
       :itemProjection="(item: LookupItem) => item.name"
-      selectOnTab="true"
+      @selectItem="newSearch"
+      selectOnTab
     >
     </SimpleTypeahead>
   </div>
