@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Details from "@/components/Details.vue";
 import Search from "@/components/Search.vue";
 </script>
 
@@ -7,7 +8,7 @@ import Search from "@/components/Search.vue";
     <div class="grid">
       <div class="search"><Search /></div>
       <div class="one">one</div>
-      <div class="two">two</div>
+      <div class="two"><Details /></div>
     </div>
   </main>
 </template>
@@ -16,7 +17,7 @@ import Search from "@/components/Search.vue";
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "search"
@@ -41,7 +42,7 @@ import Search from "@/components/Search.vue";
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr;
-    gap: 1rem 1rem;
+    gap: 0 1rem;
     grid-auto-flow: row;
     grid-template-areas:
       "search search"
