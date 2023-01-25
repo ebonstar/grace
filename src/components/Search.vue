@@ -21,10 +21,34 @@ import LOOKUP_LIST, { type LookupItem } from "@/static/data";
 div#search-wrapper {
   padding: 2rem;
 }
+
 :deep(input#search) {
   box-sizing: border-box;
   width: 100%;
   font-size: 1.2rem;
   padding: 0.4rem 1rem;
+  background: var(--light);
+  border: 2px solid var(--medium);
+  outline: none;
+}
+
+:deep(input#search:focus, input#search:active, input#search:hover) {
+  border: 2px solid var(--shadow);
+}
+
+:deep(div.simple-typeahead-list) {
+  box-sizing: border-box;
+  background: var(--light);
+  border: 2px solid var(--medium);
+  border-top: none;
+  cursor: pointer;
+}
+
+:deep(div.simple-typeahead-list-item) {
+  padding: 0.4rem 1rem;
+}
+
+:deep(div.simple-typeahead-list-item-active) {
+  background: var(--bone);
 }
 </style>
