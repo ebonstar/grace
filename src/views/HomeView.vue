@@ -1,7 +1,11 @@
+<script setup lang="ts">
+import Search from "@/components/Search.vue";
+</script>
+
 <template>
   <main>
     <div class="grid">
-      <div class="search">search</div>
+      <div class="search"><Search /></div>
       <div class="one">one</div>
       <div class="two">two</div>
     </div>
