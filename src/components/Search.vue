@@ -37,11 +37,16 @@ div#search-wrapper {
 }
 
 :deep(div.simple-typeahead-list) {
+  width: calc(100% - 8rem);
+  position: absolute;
   box-sizing: border-box;
   background: var(--light);
   border: 2px solid var(--medium);
   border-top: none;
+  max-height: 400px;
+  overflow-y: auto;
   cursor: pointer;
+  z-index: 9;
 }
 
 :deep(div.simple-typeahead-list-item) {
